@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using MooD.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Routing;
 
 namespace MooD
 {
@@ -64,7 +65,12 @@ namespace MooD
 
             app.UseAuthentication();
 
-            app.UseMvc();
+            app.UseMvc(ConfigureRoute);
+        }
+
+        private void ConfigureRoute(IRouteBuilder routeBuilder)
+        {
+            routeBuilder.MapRoute("Default", "{controller=Home}/{action=Index}/{id?}");
         }
     }
 }
