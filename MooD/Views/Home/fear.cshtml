@@ -1,0 +1,83 @@
+﻿@model PlaylistViewModel
+
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!--MENY NAVBAR-->
+
+    <nav class="navbar navbar-expand navbarBlue ">
+        <a style="width: 160px;" href="https://localhost:44361/Mood"><img class="navbar-brand" src="~/img/logotypPNG.png" width="100%" /></a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <a style="padding-left: 40px;" href="https://localhost:44376/Mood/Info.html" class="Info nav-item active nav-link">Info</a>
+
+            </ul>
+            <img src="~/img/userICon.png" style="width:5%; margin-left: 800px;" />
+        </div>
+    </nav>
+
+    <div class="container">
+        <!--VISA SMILEY + TEXT-->
+
+        <div class="container">
+            <div class="wrapper">
+                <img src="~/img/rädd copy.png" style="width: 20%; margin-top: 30px;" />
+                <h1 style="font-size: 180px;">Du ser rädd ut</h1>
+            </div>
+            <div class="row">
+                <div class="col-5" style="padding-left: 100px;">
+                    <iframe src="@Model.Playlist1" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+
+                <div class="col-7">
+
+                    <h1 style="font-size: 50px;">Men inte tillräckligt!! <br />Här är en spellista som kommer <br />hålla dig vaken inatt...</h1>
+                    <!--COLLAPSE MENY MED ALTERNATIVA SPELLISTOR-->
+
+                    <p>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="width: 200px; background-color: #585858; border-color: #585858;">
+                            Inte nöjd med spellistan?
+                        </button>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                        <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body" style="background-color: #2E2E2E; color: #458CCC; font-size: 20px; width: 650px;">
+                                <div>
+                                    <a id="CollapseOneTextHeader">Andra alternativ </a>
+                                    <p>Är du inte nöjd med din spellista  rekomenderar vi även dessa två</p>
+                                </div>
+                                <iframe src="@Model.Playlist2" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                                <iframe src="@Model.Playlist3" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--KNAPP TILLBAKA-->
+                    <a href="https://localhost:44361/Mood" class="Info nav-item active nav-link">< Tillbaka</a>
+                </div>
+
+                <!--VISA SPELLISTA-->
+
+                <div style=" float: left; padding-left: 70px;">
+
+                </div>
+
+
+            </div>
+            </div>
+
+
+        <link rel="stylesheet" href="~/css/main.css" />
+
+</body>

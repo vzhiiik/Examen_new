@@ -1,0 +1,131 @@
+﻿@model Mood.ViewModels.IndexViewModel
+
+@{
+    ViewBag.Title = "Home page";
+}
+
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+
+<body onload="init();">
+<!--MENY NAVBAR-->
+
+<nav class="navbar navbar-expand navbarBlue ">
+    <a style="width: 160px;" href="https://localhost:44376/Mood/startsida.html"><img class="navbar-brand" src="~/img/logotypPNG.png"  style="width:100%" /></a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li style="padding-left: 40px;" href="https://localhost:44376/Mood/Info.html" class="Info nav-item active nav-link">Info</li>
+
+        </ul>
+        <img src="~/img/userICon.png" style="width:5%; margin-left: 800px;" />
+        
+        //log in funktion från första sida på MVC fardig project
+        <partial name="_LoginPartial" />
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="wrapper">
+        <br /><br /><h1>Hur mår du idag?</h1>
+        @*EMOJI KNAPP*@
+        <button class="btn btn-primary" onclick="ShowEmoji()">
+            <img class="btnIcon" src="~/img/Neutral copy.png" />
+        </button>
+
+        @*KAMERA KNAPP*@
+        <button class="btn btn-primary"><img class="btnIcon" onclick="ShowCamera()" src="~/img/cameraIconWhite.png" /></button>
+
+        @*DISPLAY ALLA EMOJIS*@
+        <div id="TalkBubble">
+            <br /><br /><br />
+            <a asp-controller="Home" asp-action="Kalle" asp-route-emotion="happiness">
+                <img class="emojiBtn" src="~/img/Glad copy.png" />
+            </a>
+            <a asp-controller="Home" asp-action="Kalle" asp-route-emotion="anger">
+                <img class="emojiBtn" src="~/img/Arg copy.png" />
+            </a>
+            <a asp-controller="Home" asp-action="Kalle" asp-route-emotion="sadness">
+                <img class="emojiBtn" src="~/img/Ledsen copy.png" onclick="" />
+            </a><br /><br />
+            <a asp-controller="Home" asp-action="Kalle" asp-route-emotion="surprise">
+                <img class="emojiBtn" src="~/img/Förvånad copy.png" onclick="" />
+            </a>
+            <a asp-controller="Home" asp-action="Kalle" asp-route-emotion="fear">
+                <img class="emojiBtn" src="~/img/rädd copy.png" onclick="" />
+            </a>
+            <a asp-controller="Home" asp-action="Kalle" asp-route-emotion="neutral">
+                <img class="emojiBtn" src="~/img/Uttråkat copy.png" onclick="" />
+            </a>    
+        </div>
+
+        <div id="CameraButtons">
+
+            @*WEBCAM*@
+            
+                    <br /><button class="btn btnGrey" onclick="startWebcam();">Start WebCam</button>
+                    <button class="btn btnGrey" onclick="snapshot();">Take Snapshot</button>
+                </p>
+                <video onclick="snapshot(this);" width=400 height=400 id="video" controls autoplay></video>
+                <p>
+
+                  
+                    <div id="MinCanvaso" class="wrapper">
+                        <canvas id="myCanvas" width="400" height="300"></canvas>
+                    </div>
+
+                @*TEST2*@
+
+                <form method="post" enctype="multipart/form-data" asp-controller="UploadPic" asp-action="Index">
+                    <div id="test2"></div>
+
+
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <input class="btn btnGrey" type="submit" value="Upload" />
+                        </div>
+                    </div>
+                </form>
+
+                @*TEST1*@
+                <form method="post" enctype="multipart/form-data" asp-controller="UploadFiles" asp-action="Index">
+                    <div class="form-group">
+                        <div  class="col-md-10">
+                            <input class="btn btnGrey" type="file" name="file" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <input class="btn btnGrey" type="submit" value="Upload" />
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+    
+
+    <p style="color: #212121">Rip lilla knappen 4ever i våra minnen</p>
+
+    <link rel="stylesheet" href="~/css/main.css" />
+
+</body>
+
+
+
+
+
+
+
+    <script src="~/js/main.js"></script>

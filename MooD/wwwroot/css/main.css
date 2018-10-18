@@ -1,0 +1,105 @@
+﻿body {
+    background-color: #212121;
+}
+
+.btnGrey {
+    background-color: #585858;
+    border-color: #585858;
+}
+
+@font-face {
+    font-family: Amatic SC;
+    src: url(AmaticSC-Regular.ttf);
+}
+
+h1 {
+    font-family: 'Amatic SC';
+    font-size: 150px;
+    color: #458CCC;
+}
+
+.navbarBlue {
+    color: white;
+    background-color: #0072BB;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
+
+.btnBlue {
+    background-color: #212121;
+    color: #212121;
+}
+
+.btn-primary {
+    width: 80px;
+    height: 55px;
+}
+
+.btnIcon {
+    width: 100%;
+}
+
+.bubblePic {
+    width: 30%;
+    margin-left: -80px;
+    margin-top: 10px;
+}
+
+#TalkBubble {
+    background-image: url(../img/smallbubble.png);
+    height: 250px;
+    width: 350px;
+    margin-left: 340px;
+    margin-top: 10px;
+}
+
+    #TalkBubble .content {
+        display: inline-block;
+    }
+
+.emojiBtn {
+    display: inline-block;
+    width: 25%;
+    margin-top: -20px;
+}
+
+.Info {
+    color: yellow;
+    font-size: 20px;
+}
+
+    .Info:hover {
+        color: yellow;
+        font-size: 25px;
+    }
+
+#CollapseOneText {
+    float: right;
+    margin-right: 200px;
+}
+
+
+#CollapseOneTextHeader {
+    font-family: 'Amatic SC';
+    font-size: 50px;
+}
+
+.CollapseOne {
+    float: right;
+    margin-right: 500px;
+}
+
+.box {
+    display: inline-block;
+}
+
+ïframe {
+    padding-left: 20px;
+}

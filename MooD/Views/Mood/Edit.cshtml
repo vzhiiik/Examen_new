@@ -1,0 +1,15 @@
+﻿@model OdeToMood
+@inject IMoodService moodService
+
+<h1>Edit @Model.Name</h1>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <input type="submit" name="save" value="Save" />
+</form>
+
+<div class="special">
+    @moodService.CountMessage()
+</div>
