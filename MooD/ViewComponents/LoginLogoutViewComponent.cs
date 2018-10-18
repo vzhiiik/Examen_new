@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Mood.ViewComponents
+namespace MooD.ViewComponents
 {
     public class LoginLogoutViewComponent : ViewComponent
     {

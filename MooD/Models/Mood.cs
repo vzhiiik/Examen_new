@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Mood.Models
+namespace MooD.Models
 {
     public class OdeToMood
     {

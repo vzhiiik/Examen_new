@@ -1,7 +1,7 @@
-﻿using Mood.Models;
+﻿using MooD.Models;
 using System.Collections.Generic;
 
-namespace Mood.Services
+namespace MooD.Services
 {
     public interface IMoodData
     {

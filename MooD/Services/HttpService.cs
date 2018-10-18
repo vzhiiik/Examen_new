@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Mood.Services
+namespace MooD.Services
 {
     public class HttpService : IHttpService
     {

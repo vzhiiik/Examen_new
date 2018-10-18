@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Mood.Controllers
+namespace MooD.Controllers
 {
     public class AccountController : Controller
     {

@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Mood.Services
+namespace MooD.Services
 {
     public class MoodService : IMoodService
     {

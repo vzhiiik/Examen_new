@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Mood.Services;
+using MooD.Services;
 
-namespace Mood.ViewComponents
+namespace MooD.ViewComponents
 {
     public class GreeterViewComponent : ViewComponent
     {

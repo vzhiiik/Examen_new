@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Mood.Services
+namespace MooD.Services
 {
     public interface IHttpService
     {

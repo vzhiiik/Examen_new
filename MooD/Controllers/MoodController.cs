@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Mood.Models;
-using Mood.Services;
-using Mood.ViewModels;
+using MooD.Models;
+using MooD.Services;
+using MooD.ViewModels;
 
-namespace Mood.Controllers
+namespace MooD.Controllers
 {
     //[Authorize]
     public class MoodController : Controller

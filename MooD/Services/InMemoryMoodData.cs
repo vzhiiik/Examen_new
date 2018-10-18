@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Mood.Models;
+using MooD.Models;
 
-namespace Mood.Services
+namespace MooD.Services
 {
     public class InMemoryMoodData : IMoodData
     {

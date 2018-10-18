@@ -1,4 +1,4 @@
-﻿namespace Mood.Services
+﻿namespace MooD.Services
 {
     public interface IMoodService
     {

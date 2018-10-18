@@ -13,6 +13,7 @@ using MooD.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Routing;
+using MooD.Services;
 
 namespace MooD
 {
@@ -41,7 +42,12 @@ namespace MooD
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            //services.AddTransient<>
 
+            services.AddSingleton<IGreeter, Greeter>();
+            services.AddScoped<IMoodService, MoodService>();
+            services.AddScoped<IHttpService, HttpService>();
+            services.AddScoped<IMoodData, SqlMoodData>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Extensions.Configuration;
 
-namespace Mood.Services
+namespace MooD.Services
 {
     public interface IGreeter
     {

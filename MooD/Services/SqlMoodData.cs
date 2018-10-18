@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Mood.Models;
-using Mood.Data;
+using MooD.Models;
+using MooD.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace Mood.Services
+namespace MooD.Services
 {
     public class SqlMoodData : IMoodData
     {

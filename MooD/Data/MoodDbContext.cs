@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Mood.Models;
+using MooD.Models;
 
-namespace Mood.Data
+namespace MooD.Data
 {
     public class MoodDbContext : DbContext
     {
-        public MoodDbContext(DbContextOptions options)
+        public MooDDbContext(DbContextOptions options)
             : base(options)
         {
 

@@ -1,7 +1,7 @@
-﻿using Mood.Models;
+﻿using MooD.Models;
 using System.Collections.Generic;
 
-namespace Mood.ViewModels
+namespace MooD.ViewModels
 {
     public class IndexViewModel
     {

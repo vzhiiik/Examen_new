@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Mood.Models;
-using Mood.Models.FaceApiData;
-using Mood.ViewModels;
+using MooD.Models;
+using MooD.Models.FaceApiData;
+using MooD.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace Mood.Controllers
+namespace MooD.Controllers
 {
     //[Authorize]
     public class HomeController : Controller
